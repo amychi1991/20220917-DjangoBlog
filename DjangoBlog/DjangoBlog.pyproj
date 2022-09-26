@@ -35,6 +35,9 @@
     <Compile Include="blog\migrations\__init__.py" />
     <Compile Include="blog\models.py" />
     <Compile Include="blog\tests.py" />
+    <Compile Include="blog\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="blog\views.py" />
     <Compile Include="blog\__init__.py" />
     <Compile Include="manage.py" />
@@ -44,7 +47,10 @@
     <Compile Include="DjangoBlog\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="blog\templates\base.html" />
+    <Content Include="blog\templates\blog\content.html" />
     <Content Include="blog\templates\blog\index.html" />
+    <Content Include="blog\templates\blog\titles.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
