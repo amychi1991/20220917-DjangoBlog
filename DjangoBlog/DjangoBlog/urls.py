@@ -17,6 +17,7 @@ Including another URLconf
 """
 
 # Uncomment next two lines to enable admin:
+from argparse import Namespace
 from xml.etree.ElementInclude import include
 from django.contrib import admin
 from django.urls import path,include
@@ -28,7 +29,7 @@ from django.urls import path,include
 urlpatterns = [
     # Uncomment the next line to enable the admin:
     path('admin/', admin.site.urls),
-    path('',include('blog.urls'))
+    path('',include('blog.urls',namespace='blog'))
 
    #url(r'^$', blog.views.index, name='index'),
    #url(r'^home$', blog.views.index, name='home'),
