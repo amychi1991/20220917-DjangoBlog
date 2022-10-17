@@ -4,6 +4,7 @@
     <Name>DjangoBlog</Name>
     <RootNamespace>DjangoBlog</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -30,6 +31,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="account\admin.py" />
+    <Compile Include="account\apps.py" />
+    <Compile Include="account\migrations\__init__.py" />
+    <Compile Include="account\models.py" />
+    <Compile Include="account\tests.py" />
+    <Compile Include="account\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="account\views.py" />
+    <Compile Include="account\__init__.py" />
     <Compile Include="blog\admin.py" />
     <Compile Include="blog\apps.py" />
     <Compile Include="blog\migrations\__init__.py" />
@@ -47,6 +58,7 @@
     <Compile Include="DjangoBlog\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="account\templates\account\login.html" />
     <Content Include="blog\templates\base.html" />
     <Content Include="blog\templates\blog\content.html" />
     <Content Include="blog\templates\blog\index.html" />
@@ -56,6 +68,10 @@
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="account\" />
+    <Folder Include="account\migrations\" />
+    <Folder Include="account\templates\" />
+    <Folder Include="account\templates\account\" />
     <Folder Include="blog\" />
     <Folder Include="blog\migrations\" />
     <Folder Include="blog\templates\" />
